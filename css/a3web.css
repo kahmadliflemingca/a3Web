@@ -1,0 +1,423 @@
+body {
+  background-color: #013328;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+  /***************** 
+  * Section : Javascript Clock Holder
+  * Owner : Adrian Koornneef
+  * Date  : 2022-12-07 (
+  * From  : https://codepen.io/Tcip/pen/BNKjeN
+            https://flexiple.com/javascript/javascript-clock/
+            https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+  ******************/
+  /** Container that holds the javascript application on the index page -Adrian K **/
+  .ClockHolder {
+    border-style: outset;
+    border-color: #100C0D;
+    float: right;
+    width: 250px;
+    height: 260px;
+    background-color: #E3DCD2;
+    color:  black;
+    text-align: center;
+    border-radius: 50% 20% / 10% 40%; /** Gives the unique shape to the clock holder -Adrian K **/
+    margin: 20px;
+  }
+  
+  /** Individual IDs used for Javascript application -Adrian K **/
+  #p2 {
+    color: black;
+    text-align: center;
+    flex-wrap: wrap;
+    font-style: italic;
+  }
+
+  #p3 {
+    color: black;
+    text-align: center;
+    flex-wrap: wrap;
+    font-style: italic;
+  }
+  
+    /** This is where the time and date will be inserted into with the Javascript application -Adrian K **/
+  #clock {
+    color: black;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+    
+  #showDate {
+    color: black;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  /***************** 
+  * Section : Navbar
+  * Owner : Adrian Koornneef
+  * Date  : Nov-12-06 (v2)
+  * From  : https://www.w3schools.com/css/tryit.asp?filename=trycss_template4 
+          https://www.w3schools.com/howto/howto_js_tabs.asp
+          https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+          https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+          https://developer.mozilla.org/en-US/docs/Web/CSS/border-right
+  
+  ******************/
+
+  /** Main, static navbar -Adrian K **/
+  .MAVsidenav {
+    margin: 0;
+    padding: 6px;
+    width: 200px;
+    background-color:rgb(204,139,101);
+    position: fixed;
+    height: 100%;
+    overflow: auto; /** How the navbar handles text that flows past borders. Should not be an issue with current sizing. -Adrian K **/
+    border-right: 3mm ridge rgba(227, 220, 210, .6); /** To give the accent on right hand side -Adrian K **/
+  }
+  
+  /** Links within the navbar -Adrian K **/
+  .MAVsidenav a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1.25px black;  /* last px variable determines size -AK **/
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+  }
+   
+  /** To identify which page the user is currently visiting -Adrian K **/
+  .MAVsidenav a.active {
+    text-decoration: underline #013328;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; 
+  }
+  
+  /** Characteristics of navbar when hovering the mouse over a link -AK **/
+  .MAVsidenav a:hover {
+    background-color: #E3DCD2 ;
+    color: #100C0D;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /** Respsonsive element allows restacking of navbar -AK **/
+  /** Side Bar limit **/
+  @media screen and (max-width: 700px) {
+    .MAVsidenav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .MAVsidenav a {float: left;}   /** How links interact in topbar mode -AK **/
+    div.content {margin-left: 0;}   /** How the main page content holder div positions in relation to the Navbar -AK **/
+  }
+  
+ /** Top Bar limit **/
+  @media screen and (max-width: 400px) {
+    .MAVsidenav a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+  /*************************************
+  * Section : Button
+  * Owner : Adrian Koornneef
+  * Date  : Nov-12-06 (v2)
+  Experimenting zone 
+  https://www.w3schools.com/howto/howto_css_outline_buttons.asp
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
+ *************************************/
+
+  /** Big inviting button used to activate the Javacript application on the index -AK  **/
+  .MavButton {
+    padding: 15px 25px;
+    font-size: 21px;
+    text-align: center;
+    cursor: crosshair; /** Changes the shape of the cursor when hovering with the button -AK **/
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1.25px black; 
+    background-color: rgb(204,139,101);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px rgb(48, 48, 48);
+  }
+
+  /** Change the button to a different colour of the button when hovering -AK **/
+  .MavButton:hover {background-color: #777777}
+
+   /** Change the colour and shape of the button to another different colour while the user is clicking -AK **/
+  /** Gives the impression of a button being pushed -AK**/
+  .MavButton:active {
+  background-color: #7700ff;
+  box-shadow: 0 5px rgb(48, 48, 48);
+  transform: translateY(4px);
+  }
+
+  .content { 
+    margin-left: 225px;
+    padding-left: 10px;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    color: #b4b4b4;
+    padding-top: 75px;
+  }
+
+h1{
+  font-size: 50px;
+  font-family: 'Vidaloka';
+  color: #ffffff;
+}
+h2{
+  font-size: 30px;
+  font-family: 'Vidaloka';
+  color: #ffffff;
+}
+h3{
+  font-size: 20px;
+  font-family: 'Vidaloka';
+  color: #ffffff;
+}
+h4{
+  font-size: 20px;
+  font-style: italic;
+  color: #ffffff;
+}
+p{
+  font-size: 18px;
+  color: #b4b4b4;
+}
+
+/* Style Logo - Khazana Ahmadli
+Some edits included by Adrian K. for positioning*/
+.logo { 
+  position: relative;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  z-index: 1; /** Ensure the logo sits above the navbar and not underneath -AK **/
+  width: 100%;
+  height: auto;
+}
+/***************** 
+* Section : Body 
+* Owner : Ashley Allan
+* Date  : Nov-25-22
+* From  : https://www.w3schools.com/css/tryit.asp?filename=trycss_website_layout_grid
+******************/
+/* Create three columns that float next to each other */
+.column {
+  float: left;
+  width: 22%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns - this is important because it forces the containing element to expand to contain child elements, and forces subsequent elements to appear below it */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes columns stack on top of each other as page size gets smaller*/
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+/* Style Services
+Owner: Khazana Ahmadli
+Date: November 28, 2022
+From https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-type_ex */ 
+
+
+/* Adds square bullets to the listed content */
+ul.square {
+  list-style-type: square;
+  font-size: 18px;
+  color: #b4b4b4;
+  line-height: 2;
+}
+
+img {
+  max-width:100%;height:auto
+}
+
+/* Style Services
+Owner: Khazana Ahmadli
+Date: December 01, 2022
+https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_gallery_responsive
+/* Style images in Cartography/Map Design page */
+
+.mapgallery {
+  margin-left: 54%;
+  padding-left: 5px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #b4b4b4;
+}
+div.gallery img {
+  width: 100%;
+  height: auto;
+  margin-left: 90%;
+  padding-left: 5px;
+}
+
+
+.responsive {
+  padding: 0 3px;
+  float: left;
+  width: 24.99999%;
+}
+
+/* Style Services
+Owner: Khazana Ahmadli
+Date: December 01, 2022
+https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_gallery_responsive and https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_round
+/* Style images in Surveying page */
+
+div.survey img {
+  max-width:100%;
+  height: auto;
+  margin-left: 25%;
+  padding-left: 5px;
+  border-radius: 25px;
+}
+
+div.survey1 img {
+  max-width:100%;
+  height: auto;
+  margin-left: 75%;
+  padding-left: 5px;
+  border-radius: 25px;
+  margin-top: 480px;
+}
+
+div.survey2 img {
+  max-width:100%;
+  height: auto;
+  margin-left: 45%;
+  padding-left: 5px;
+  border-radius: 25px;
+  margin-top: 180px;
+}
+
+
+/*
+- Section : Pricing>Pricing table
+- Owner : Janet
+- Date  : Dec-02-22
+- From  : https://www.w3schools.com/howto/howto_css_pricing_table.asp
+
+
+
+/* Create three columns of equal width */
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 2px;
+  max-width: 300px;
+}
+
+/* Style the list */
+.price {
+  list-style-type: none;
+  border: 1px solid #E3DCD2;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Pricing header */
+.price .header {
+  background-color: #CC8B65;
+  color: white;
+  font-size: 30px;
+  font-family: 'Vidaloka';
+}
+
+/* List items */
+.price li {
+  border-bottom: 1px solid #E3DCD2;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Grey list item */
+.price .grey {
+  background-color: #E3DCD2;
+  color: black;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* The "Sign Up" button */
+.button {
+  background-color: #CC8B65;
+  border: none;
+  color:white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+
+/*
+- Section : Sofware Solutions Page
+- Owner : Khazana Ahmadli
+- Date  : Dec-02-22
+- From  : https://www.w3schools.com/cssref/playdemo.php?filename=playcss_text-shadow  */
+/* Style Images and header in Software Page*/
+div.software {
+  margin-left: 25%;
+  padding-left: 8px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #b4b4b4;
+  text-shadow:5px 5px 5px black;
+}
+
+div.pumpkin img {
+  width: 100%;
+  height: auto;
+  margin-left: 60%;
+  padding-left: 5px;
+  border-radius: 70%;
+}
+/*
+- Section : Spatial Analysis Page
+- Owner : Khazana Ahmadli
+- Date  : Dec-02-22
+- From  : https://www.w3schools.com/css/tryit.asp?filename=trycss_link_advanced  */
+
+/* Style links for Web Maps*/
+a.one:link, a.one:visited {
+  background-color: #CC8B65;
+  color: white;
+  padding: 5px 19px;
+  font-family: 'Roboto', sans-serif;
+  display: table-cell;
+  margin-left: 6%;
+  padding-left: 3px;
+}
+
+a.one:hover, a.one:active {
+  background-color: #CC8B65;
+}
+
