@@ -103,7 +103,7 @@ body {
     font-family: 'Roboto', sans-serif;
   }
   
-  /** Respsonsive element allows restacking of navbar -AK **/
+  /** Responsive element allows restacking of navbar -AK **/
   /** Side Bar limit **/
   @media screen and (max-width: 700px) {
     .MAVsidenav {
@@ -132,7 +132,7 @@ body {
   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
  *************************************/
 
-  /** Big inviting button used to activate the Javacript application on the index -AK  **/
+  /** Big inviting button used to activate the Javascript application on the index -AK  **/
   .MavButton {
     padding: 15px 25px;
     font-size: 21px;
@@ -229,6 +229,11 @@ Some edits included by Adrian K. for positioning*/
   }
 }
 
+.iconlinks {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #b4b4b4;
+}
 
 /* Style Services
 Owner: Khazana Ahmadli
@@ -379,7 +384,7 @@ div.survey2 img {
 
 
 /*
-- Section : Sofware Solutions Page
+- Section : Software Solutions Page
 - Owner : Khazana Ahmadli
 - Date  : Dec-02-22
 - From  : https://www.w3schools.com/cssref/playdemo.php?filename=playcss_text-shadow  */
